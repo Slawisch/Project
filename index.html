@@ -4,10 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SoundTest</title>
+    
 
-
+    <script src="random_sound.js"></script>
     <style>
            
+        body
+        {
+            font-size: medium;
+        }
+
         a.button8 
         {
             display: inline-block;
@@ -25,48 +31,31 @@
             a.button8:active { background: darkslategrey; }
     </style>
 
-        <audio name = "Song" id="TellYouWorld" src="tellyourworld_7dl.ogg" preload="auto"></audio>
-        <audio name = "Song" id="StillLovingYou" src="StillLovingYou.mp3" preload="auto"></audio>
-        <audio name = "Song" id="DejaVu" src="DejaVu.mp3" preload="auto"></audio>
-
-    <script >
-        var songs = document.getElementsByName("Song")
-        function PlaySound()
-        {
-            var radionbuttons = document.getElementsByName("SongRB")
-            for (var i = 0; i < radionbuttons.length; i++)
-            {
-                if(radionbuttons[i].checked)
-                {
-                    songs[i].play()
-                }
-                else
-                {
-                    songs[i].pause()        
-                }
-            }
-        }
-        
-        function StopAllSongs() {
-            for (var i = 0; i < songs.length; i++)
-            {
-                songs[i].pause()    
-            }
-        }
-        
-    </script>
+        <audio name = "Song" id="do" src="note/noty-do.mp3" preload="auto"></audio>
+        <audio name = "Song" id="re" src="note/re.mp3" preload="auto"></audio>        
+        <audio name = "Song" id="mi" src="note/mi.mp3" preload="auto"></audio>
+        <audio name = "Song" id="fa" src="note/fa.mp3" preload="auto"></audio>
+        <audio name = "Song" id="sol" src="note/sol.mp3" preload="auto"></audio>
+        <audio name = "Song" id="lja" src="note/lja.mp3" preload="auto"></audio>
+        <audio name = "Song" id="si" src="note/si.mp3" preload="auto"></audio>
 
 </head>
 <body>
-
-    <form id = "form">
-        <input type = "radio" name = "SongRB" value = "song1"> Song 1 <br>
-        <input type = "radio" name = "SongRB" value = "song2"> Song 2 <br>
-        <input type = "radio" name = "SongRB" value = "song3"> Song 3 <br>
-    </form>
+   
 
     <a onclick="PlaySound();" class="button8">Play Sound!</a>
     <a onclick="StopAllSongs();" class="button8">Stop All Songs!</a>
+    <br>
+    <div id="div_1"></div>
+    <hr><br>
+
+    <a onclick="cheakSound(0);" class="button8">Do</a>
+    <a onclick="cheakSound(1);" class="button8">Re</a>
+    <a onclick="cheakSound(2);" class="button8">Mi</a>
+    <a onclick="cheakSound(3);" class="button8">Fa</a>
+    <a onclick="cheakSound(4);" class="button8">Sol</a>
+    <a onclick="cheakSound(5);" class="button8">Lja</a>
+    <a onclick="cheakSound(6);" class="button8">Si</a>
 
 </body>
 </html>
