@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoundTest</title>
+
+    <style>
+           
+        a.button8 
+        {
+            display: inline-block;
+            color: black;
+            font-weight: 700;
+            text-decoration: none;
+            user-select: none;
+            padding: .5em 2em;
+            outline: none;
+            border: 2px solid;
+            border-radius: 1px;
+            transition: 0.2s;
+        } 
+            a.button8:hover { background: rgba(255,255,255,.2); }
+            a.button8:active { background: darkslategrey; }
+    </style>
+
+        <audio id="Miku" src="tellyourworld_7dl.ogg" preload="auto"></audio>
+
+    <script >
+        function sound()
+        {
+            document.getElementById('Miku').play();
+        alert(0);
+        }
+    </script>
+
+</head>
+<body>
+    <a href="javascript:;" onclick="sound();" class="button8">кнопка</a>
+
+</body>
+</html>
