@@ -1,9 +1,9 @@
 var songs = document.getElementsByName("Song")
-var currentSound = 0;
+var currentSound = randomInteger(0,6);
 var playerScore = 0;
 var PressSong = 0;
 
-function PlaySound()
+function PlaySound(typeOfSound)
 {
    // var radionbuttons = document.getElementsByName("SongRB")
    // for (var i = 0; i < 3; i++)
@@ -17,7 +17,10 @@ function PlaySound()
    //         songs[i].pause()        
    //     }
    // }
-    currentSound = randomInteger(0,6);
+   if (typeOfSound == 0)
+   {
+        currentSound = randomInteger(0,6);
+   }
     songs[currentSound].play();
     PressSong++;
 }
@@ -41,25 +44,30 @@ function randomInteger(min, max)
     tempForWriteScore.innerHTML="Your score: " + playerScore;
  }
 
+var arrOfNote = ['Do','Re','Mi','Fa','Sol','Lya','Si'];
+
 function cheakSound(numberSong)
 {
-    if (numberSong == currentSound)
-    {
-        playerScore++;
-        writeScore();
-        alert("Ти вгадав!");        
-    }
-    else if (PressSong == 0)
+    
+    if (PressSong == 0)
     {
         var tempForWriteScore=document.getElementById("div_1");
         tempForWriteScore.innerHTML="Press Play sound!";
         alert("Спочатку послухай, а потім угадуй");
     } 
+    else if (numberSong == currentSound)
+    {
+        playerScore++;
+        writeScore();
+        alert("Ти вгадав!");    
+        PlaySound(0);    
+    }
     else
     {
         playerScore--;
         writeScore();
-        alert("Try again!");
+        alert("No, it was "+arrOfNote[currentSound]+" Try again!");
+        PlaySound(0);
     }
     
 }
