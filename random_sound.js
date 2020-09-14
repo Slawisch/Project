@@ -18,8 +18,13 @@ function PlaySound(typeOfSound)
    //     }
    // }
    if (typeOfSound == 0)
-   {
-        currentSound = randomInteger(0,6);
+   {    
+       var previousSound = currentSound;
+       do
+       {
+           currentSound = randomInteger(0,6);
+       }
+        while (previousSound == currentSound);
    }
     songs[currentSound].play();
     PressSong++;
