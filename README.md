@@ -1,2 +1,2 @@
 The most powerfull website of the Internet
-https://slawisch.github.io/Project/
+https://slawisch.github.io/SoundProject/
