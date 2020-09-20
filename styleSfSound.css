@@ -1,0 +1,84 @@
+
+.header-fon
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 160px;
+
+  background: rgba(66,29,0,0.91) ;
+}
+
+.header-fon img
+{
+  float: left; /* Щоб картинка була зліва */
+  margin-left: 150px;
+  margin-top: 30px;
+  margin-bottom: 0px;
+}
+
+.header-text
+{
+  margin-bottom: 0px;
+  margin-top: 40px;
+  font-family: Harlow Solid;
+  font-size: 60px;
+  color: #fdc86c;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: black;
+
+}
+
+.header-line
+{
+  border: none; /* Убираем границу для браузера Firefox */
+  background-color: #fdc86c; /* Цвет линии для браузера Firefox и Opera */
+  height: 2px; /* Толщина линии */
+  color: #fdc86c;
+  margin: 0 150px 0px;
+}
+
+.buttons
+{
+  text-align: left;
+  margin: 0 50px;
+}
+
+a.button8
+{
+  margin-top: 0px;
+  display: inline-block;
+  color: #fdc86c;
+  font-weight: 700;
+  text-decoration: none;
+  user-select: none;
+  padding: .5em;
+  border-top: 2px solid rgba(213,184,80,0);
+  transition: 0.2s;
+}
+a.current
+{
+  border-top: 2px solid #fdc86c;
+}
+
+a.button8:hover
+{
+  color: #eee0b2;
+  border-top: 2px solid  #fdc86c;
+}
+a.button8:active
+{
+  color: #b48c50;
+  border-color: #b48c50;
+}
+
+
+body
+{
+  background-image: url("img/FonGuitar.jpg");
+  background-repeat:no-repeat;
+  background-size: 100%;
+  margin: 150px;
+  background-color: #b48c50;
+}
