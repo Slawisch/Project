@@ -1,7 +1,7 @@
 
 .header-fon
 {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -30,7 +30,7 @@
 
 }
 
-.header-line
+#header-line
 {
   border: none; /* Убираем границу для браузера Firefox */
   background-color: #fdc86c; /* Цвет линии для браузера Firefox и Opera */
@@ -39,10 +39,50 @@
   margin: 0 150px 0px;
 }
 
-.buttons
+.fix-line
+{
+  border: none; /* Убираем границу для браузера Firefox */
+  background-color: #fdc86c; /* Цвет линии для браузера Firefox и Opera */
+  height: 2px; /* Толщина линии */
+  color: #fdc86c;
+  position: fixed;
+  top: 0px;
+  left: 100px;
+  right: 0px;
+
+
+}
+
+#buttons
 {
   text-align: left;
   margin: 0 50px;
+}
+
+#mybgbutton
+{
+  width: 100%;
+  display:block;
+}
+
+.fix-mybuttonfon
+{
+  top: 0px;
+  position: fixed;
+  width: 100%;
+  height: 44px;
+  background: rgba(66,29,0,0.91) ;
+}
+
+.fixed
+{
+  position: fixed;
+  /*text-align: left;*/
+  top: 2px;
+  left: 200px;
+  width: 100%;
+
+  /*background: rgba(239, 5, 5, 0.95);*/
 }
 
 a.button8
@@ -76,7 +116,7 @@ a.button8:active
 .contentText
 {
   min-height: 550px;
-  height: 200px;
+  height: 120px;
   margin: 200px;
   background: linear-gradient(to top, rgba(126,84,0,0.51), rgba(126,84,0,0));
   /*background-color: rgba(67,34,2,0.55) ;*/
