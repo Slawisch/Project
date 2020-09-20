@@ -4,17 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SoundTest</title>
-    
 
-    <script src="random_sound.js"></script>
+
+
+
+  <link href="styleSfSound.css" type="text/css" rel="stylesheet">
+  <link href="hoverMenu.css" type="text/css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script src="menu.js"></script>
+  <link href="hoverMenu.css" type="text/css" rel="stylesheet">
+
+  <script src="random_sound.js"></script>
     <style>
-           
+
         body
         {
             font-size: medium;
         }
 
-        a.button8 
+        .button
         {
             display: inline-block;
             color: black;
@@ -26,13 +34,19 @@
             border: 2px solid;
             border-radius: 1px;
             transition: 0.2s;
-        } 
-            a.button8:hover { background: rgba(255,255,255,.2); }
-            a.button8:active { background: darkslategrey; }
+        }
+            .button:hover { background: rgba(255,255,255,.2); }
+            .button:active { background: darkslategrey; }
+
+        .centrContent
+        {
+          text-align: center;
+        }
+
     </style>
 
         <audio name = "Song" id="do" src="note/noty-do.mp3" preload="auto"></audio>
-        <audio name = "Song" id="re" src="note/re.mp3" preload="auto"></audio>        
+        <audio name = "Song" id="re" src="note/re.mp3" preload="auto"></audio>
         <audio name = "Song" id="mi" src="note/mi.mp3" preload="auto"></audio>
         <audio name = "Song" id="fa" src="note/fa.mp3" preload="auto"></audio>
         <audio name = "Song" id="sol" src="note/sol.mp3" preload="auto"></audio>
@@ -40,14 +54,33 @@
         <audio name = "Song" id="si" src="note/si.mp3" preload="auto"></audio>
 
 </head>
-<body>
-   
 
+
+<header>
+  <section class="header-fon">
+    <img src="img/SoundProjectLogo.png" height="100" width="100">
+    <h2 class="header-text">Sound Project</h2>
+
+    <div id ="mybgbutton">
+      <hr id ="header-line">
+      <div id = "buttons" >
+
+        <a href="index.html" class = "button8">Главная</a>
+        <a href="notetest.html" class = "button8 current">Неглавная</a>
+      </div>
+    </div>
+  </section>
+</header>
+
+
+<body>
+
+  <div class = "contentText centrContent">
     <a onclick="PlaySound(1);" class="button8">Play Sound!</a>
     <a onclick="StopAllSongs();" class="button8">Stop All Songs!</a>
     <br>
     <div id="div_1"></div>
-    <hr><br>
+    <hr color="#fdc86c"><br>
 
     <a onclick="cheakSound(0);" class="button8">Do</a>
     <a onclick="cheakSound(1);" class="button8">Re</a>
@@ -56,6 +89,6 @@
     <a onclick="cheakSound(4);" class="button8">Sol</a>
     <a onclick="cheakSound(5);" class="button8">Lja</a>
     <a onclick="cheakSound(6);" class="button8">Si</a>
-
+  </div>
 </body>
 </html>

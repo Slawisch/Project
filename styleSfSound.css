@@ -115,8 +115,8 @@ a.button8:active
 
 .contentText
 {
-  min-height: 550px;
-  height: 120px;
+  /*min-height: 550px;*/
+  /*height: 120px;*/
   margin: 200px;
   background: linear-gradient(to top, rgba(126,84,0,0.51), rgba(126,84,0,0));
   /*background-color: rgba(67,34,2,0.55) ;*/
