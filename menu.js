@@ -1,6 +1,6 @@
 var scroll = 126;
 
-if (document.documentElement.clientWidth >= 780)
+if (document.documentElement.clientWidth > 1024)
 {
   jQuery(function ($) {
     $(window).scroll(function () {

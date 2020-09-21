@@ -115,15 +115,53 @@ a.button8:active
   border-color: #b48c50;
 }
 
+a.text-link
+{
+  color: #eee0b2;
+  text-decoration: none;
+}
+
+a.text-link:hover
+{
+  color: #fdc86c;
+}
+
 .contentText
 {
   /*min-height: 550px;*/
-  height: 1200px;
-  margin: 200px;
-  background: linear-gradient(to top, rgba(126,84,0,0.51), rgba(126,84,0,0));
+  position: absolute;
+  top: 370px;
+
+  font-family: Microsoft YaHei ;
+
+  font-size: 30px;
+  /*background: linear-gradient(to top, rgba(126,84,0,0.51), rgba(126,84,0,0));*/
   /*background-color: rgba(67,34,2,0.55) ;*/
   color: #eee0b2;
+  border-left: 3px solid #fdc86c;
 
+  /*!*opacity:0; !* плавно з'явиться*!*!---------------------------------------------------*/
+  transition: 2s; /*Скорость перехода состояния элемента*/
+  animation: show 3s 1; /* Указываем название анимации, её время и количество повторов*/
+  animation-fill-mode: forwards; /* Чтобы элемент оставался в конечном состоянии анимации */
+  animation-delay: 2s; /* Задержка перед началом */
+
+  left: -1000px;
+
+}
+
+@keyframes show
+{
+  0%
+  {
+    /*opacity:0;*/
+    left: -1000px;
+  }
+  100%
+  {
+    /*opacity:100%;*/
+    left: 5px;
+  }
 }
 
 .main-footer
@@ -142,14 +180,14 @@ body
   background-image: url("img/FonGuitar.jpg");
   background-repeat:no-repeat;
   background-size: 100% 100%;
-  min-height: 500px;
+  height: 800px;
   margin: 150px;
   background-color: #b48c50;
 }
 
 
 
-@media (max-width: 780px)
+@media (max-width: 1024px)
 {
   .header-fon
   {
