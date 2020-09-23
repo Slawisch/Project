@@ -7,9 +7,8 @@
   top: 0;
   left: 0;
   width: 100%;
-
-
-  background: rgba(66,29,0,0.91) ;
+  
+  background: linear-gradient(to right, rgba(71, 31, 1, 0.68) 0%, rgba(104, 57, 9, 0.75) 50%, rgba(130, 82, 7, 0.5) 100%);
 }
 
 .header-fon img
@@ -35,7 +34,8 @@
 #header-line
 {
   border: none; /* Убираем границу для браузера Firefox */
-  background-color: #fdc86c; /* Цвет линии для браузера Firefox и Opera */
+  /*background-color: #fdc86c; !* Цвет линии для браузера Firefox и Opera *!*/
+  background: linear-gradient(to right,rgb(248, 180, 95) 0%, rgb(248, 180, 95) 50%, rgb(208, 151, 65) 100%);
   height: 2px; /* Толщина линии */
   color: #fdc86c;
   margin: 0 150px 0px;
@@ -73,7 +73,8 @@
   position: fixed;
   width: 100%;
   height: 44px;
-  background: rgba(66,29,0,0.91) ;
+  background: linear-gradient(to right, rgba(71, 31, 1, 0.68) 0%, rgba(104, 57, 9, 0.75) 50%, rgba(130, 82, 7, 0.5) 100%);
+
 }
 
 .fixed
@@ -132,19 +133,19 @@ a.text-link:hover
   position: absolute;
   top: 370px;
 
-  font-family: Microsoft YaHei ;
+  font-family: Corbel ;
 
-  font-size: 30px;
+  font-size: 35px;
   /*background: linear-gradient(to top, rgba(126,84,0,0.51), rgba(126,84,0,0));*/
   /*background-color: rgba(67,34,2,0.55) ;*/
   color: #eee0b2;
   border-left: 3px solid #fdc86c;
 
   /*!*opacity:0; !* плавно з'явиться*!*!---------------------------------------------------*/
-  transition: 2s; /*Скорость перехода состояния элемента*/
-  animation: show 3s 1; /* Указываем название анимации, её время и количество повторов*/
+  /*transition: 0.5s; !*Скорость перехода состояния элемента*!*/
+  animation: show 2s 1; /* Указываем название анимации, её время и количество повторов*/
   animation-fill-mode: forwards; /* Чтобы элемент оставался в конечном состоянии анимации */
-  animation-delay: 2s; /* Задержка перед началом */
+  animation-delay: 0s; /* Задержка перед началом */
 
   left: -1000px;
 
